@@ -4,6 +4,7 @@ require "carro.php";
 require_once("./produto.php");
 require_once("./cliente.php");
 require_once("./professor.php");
+require_once("./disciplina.php");
 
 
 
@@ -12,7 +13,7 @@ $carro2 = new Carro("Civic", "Grafite", "FDS-1212", 4);
 $produto  = new Produto("Bola","Bola de futebol, do tipo futsal",100,30);
 $cliente = new Cliente("Yan Pablo Rodrigues", "56739021", "53624172890", "19064890");
 $professor = new Professor("Jao da Silva", "joao@gmail.com", "998723819", "1000");
-
+$disciplina = new Disciplina("Matemática" ,"10", "Joao gonzales almeida");
 
 
 $carro1->ligar();
@@ -28,6 +29,7 @@ $produto->cadastrar_produto("Bola","Bola de futebol, do tipo futsal",100,30, $ar
 $cliente->valida_cadastro("Yan Pablo Rodrigues", "56739021", "53624172890", "19064890");
 $professor->setNome("Jao da silva sauro");
 $professor->verifica_curriculo();
-
+$disciplina->setAula("9");
+$disciplina->materia_verifica();
 
 ?>
